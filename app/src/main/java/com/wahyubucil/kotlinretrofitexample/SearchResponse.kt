@@ -1,16 +1,18 @@
 package com.wahyubucil.kotlinretrofitexample
 
+import com.google.gson.annotations.SerializedName
+
 data class User (
-        val login: String,
-        val id: Long,
-        val url: String,
-        val html_url: String,
-        val followers_url: String,
-        val following_url: String,
-        val starred_url: String,
-        val gists_url: String,
-        val type: String,
-        val score: Int
+        @SerializedName("login") val login: String,
+        @SerializedName("id") val id: Long,
+        @SerializedName("url") val url: String,
+        @SerializedName("html_url") val htmlUrl: String,
+        @SerializedName("followers_url") val followersUrl: String,
+        @SerializedName("following_url") val followingUrl: String,
+        @SerializedName("starred_url") val starredUrl: String,
+        @SerializedName("gists_url") val gistsUrl: String,
+        @SerializedName("type") val type: String,
+        @SerializedName("score") val score: Int
 )
 
 data class Result (
